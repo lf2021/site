@@ -1,0 +1,14 @@
+{
+  "sider": {
+    "basic": [
+      { "key": "browser", "value": "浏览器" },
+      { "key": "Algorithms", "value": "数据结构与算法" },
+      { "key": "html", "value": "HTML" },
+      { "key": "css", "value": "CSS" },
+      { "key": "javascript", "value": "JavaScript" }
+    ],
+    "framework": [
+      { }
+    ]
+  }
+}

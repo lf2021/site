@@ -1,0 +1,77 @@
+.md-wrapper {
+  padding: 24px 100px 24px 32px;
+  background-color: #f4f5f5;
+
+  /* 滚动条自定义 */
+  ::-webkit-scrollbar {
+    /*纵向滚动条*/
+    width: 6px;
+    /*横向滚动条*/
+    height: 6px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: #cfcfd1;
+    border-radius: 3px;
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: none;
+  }
+  ::-webkit-scrollbar-corner {
+    background-color: none;
+  }
+}
+
+.md-content {
+  max-width: 1214px;
+  min-width: 400px;
+}
+
+.md-toc {
+  border-radius: 4px;
+  box-shadow: 0 2px 7px rgba(171, 187, 204, 0.420109);
+  background-color: rgba(255, 255, 255, 0.2);
+  width: 240px;
+  height: calc(100% - 200px);
+  position: fixed;
+  right: 48px;
+  top: 100px;
+  overflow-y: auto;
+
+  :global(.title-anchor) {
+    width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }  
+}
+
+
+/* md 的展示格式自定义 */
+h3 {
+  padding-left: 10px;
+}
+
+li {
+  line-height: 24px;
+}
+
+ul {
+  padding-left: 15px;
+}
+
+blockquote {
+  margin-left: 10px;
+  padding: 0 10px;
+  color: #57606a;
+  border-left: 4px solid #d0d7de;
+}
+
+pre {
+  width: 1012px;
+  padding: 16px;
+  overflow: auto;
+  background-color: #2d333b;
+  border-radius: 6px;
+  color: #adbac7
+}
