@@ -21,4 +21,3 @@ yarn dev
 react 项目引用markdown文件并解析，[参考文档](https://juejin.cn/post/7028826246616350728)
 - react-markdown
 - remark-gfm
-- vite-plugin-react-md

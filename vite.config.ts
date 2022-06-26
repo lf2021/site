@@ -5,6 +5,17 @@ const path = require('path');
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor0: ['react', 'react-dom'],
+          vendor1: ['@douyinfe/semi-ui'],
+          vendor2: ['react-markdown', 'remark-gfm', 'markdown-navbar'],
+        },
+      },
+    },
+  },
   resolve: {
     alias: {
       '@': path.resolve(__dirname, 'src'),
