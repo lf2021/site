@@ -11,7 +11,6 @@ export default defineConfig({
     },
   },
   css: {
-    devSourcemap: true,
     modules: {
       generateScopedName: '[local]__[hash:base64:5]',
       hashPrefix: 'prefix',

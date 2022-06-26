@@ -8,6 +8,8 @@ import styles from './style.module.less';
 
 const content = () => {
   const [md, setMd] = React.useState('');
+  
+  // 获取md文件
   React.useEffect(() => {
     fetch('src/assets/browser.md')
       .then(res => res.text())
@@ -18,10 +20,29 @@ const content = () => {
         console.log('加载失败')
       })
   }, []);
+
+  const mdRef = React.useRef<HTMLDivElement>(null);
+
+  const onHashChange = (newHash: any, oldHash: any) => {
+    const nodeList = mdRef.current?.childNodes || [];
+    for (let i = 0; i < nodeList.length; i++) {
+      const node: any = nodeList[i];
+      if (node?.dataset?.id === newHash) {
+        node?.scrollIntoView();
+        return;
+      }
+    }
+  }
+
   return (
-    <div className={styles['md-wrapper']}>
-      <MarkNav className={styles['md-toc']} source={md} ordered={true} />
-      <ReactMarkdown className={styles['md-content']} children={md} remarkPlugins={[remarkGfm]} />
+    <div className={styles['md-content']} ref={mdRef}>
+      <MarkNav
+        className={styles['md-toc']}
+        source={md}
+        ordered={true}
+        onHashChange={onHashChange}
+      />
+      <ReactMarkdown children={md} remarkPlugins={[remarkGfm]} />
     </div>
   );
 };
