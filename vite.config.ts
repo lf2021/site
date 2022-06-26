@@ -6,7 +6,6 @@ const path = require('path');
 export default defineConfig({
   plugins: [react()],
   build: {
-    assetsDir: 'site/assets',
     rollupOptions: {
       output: {
         manualChunks: {
