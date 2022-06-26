@@ -2,7 +2,7 @@
   "name": "my-website",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://lf2021.github.io/FE-Website",
+  "homepage": "./",
   "scripts": {
     "echo": "node ./scripts/echo.js",
     "dev": "yarn echo && vite",

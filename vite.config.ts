@@ -6,6 +6,7 @@ const path = require('path');
 export default defineConfig({
   plugins: [react()],
   build: {
+    assetsDir: 'site/assets',
     rollupOptions: {
       output: {
         manualChunks: {
@@ -18,7 +19,7 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, 'src'),
+      'src': path.resolve(__dirname, 'src'),
     },
   },
   css: {
