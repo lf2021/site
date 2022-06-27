@@ -1,5 +1,5 @@
 import { Avatar } from '@douyinfe/semi-ui';
-import AvatarUrl from 'src/assets/svg/avatar.svg'
+import AvatarUrl from '@/assets/svg/avatar.svg'
 
 import styles from './style.module.less';
 

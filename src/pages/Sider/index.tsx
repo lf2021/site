@@ -1,10 +1,13 @@
 import React from 'react';
 import { Nav } from '@douyinfe/semi-ui';
 import { IconApartment, IconLayers, IconLikeThumb, IconUserGroup, IconWrench } from '@douyinfe/semi-icons';
+import { GlobalInfoCtx } from '@/components/GlobalProvider';
 
 import styles from './style.module.less';
 
 const Sider = () => {
+  const { updateGlobalInfo } = React.useContext(GlobalInfoCtx);
+
   const items = React.useMemo(
     () => [
       {
@@ -44,7 +47,8 @@ const Sider = () => {
   const defaultOpenKeys = React.useMemo(() => [items[0].itemKey], []);
 
   const onClick = (data: { itemKey: React.ReactText; domEvent: MouseEvent; isOpen: boolean } | undefined) => {
-    console.log('data', data);
+    if (items.find(({ itemKey }) => itemKey === data?.itemKey)) return;
+    updateGlobalInfo({ navKey: data?.itemKey });
   };
 
   const [isCollapsed, setIsCollapsed] = React.useState(false);
