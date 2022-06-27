@@ -2,8 +2,9 @@ import React from 'react';
 import ReactMarkdown from 'react-markdown'; // 解析 markdown
 import remarkGfm from 'remark-gfm'; // markdown 对表格/删除线/脚注等的支持
 import MarkNav from 'markdown-navbar';
-import 'markdown-navbar/dist/navbar.css';
+import mdUrl from 'src/markdown/browser.md?url';
 
+import 'markdown-navbar/dist/navbar.css';
 import styles from './style.module.less';
 
 const content = () => {
@@ -11,14 +12,14 @@ const content = () => {
   
   // 获取md文件
   React.useEffect(() => {
-    fetch('src/assets/browser.md')
+    fetch(mdUrl)
       .then(res => res.text())
       .then(text => {
         setMd(text);
       })
       .catch(() => {
-        console.log('加载失败')
-      })
+        console.log('加载失败');
+      });
   }, []);
 
   const mdRef = React.useRef<HTMLDivElement>(null);

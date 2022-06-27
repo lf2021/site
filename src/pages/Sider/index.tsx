@@ -43,17 +43,14 @@ const Sider = () => {
 
   const defaultOpenKeys = React.useMemo(() => [items[0].itemKey], []);
 
-  const onClick = React.useCallback(
-    (data: { itemKey: React.ReactText; domEvent: MouseEvent; isOpen: boolean } | undefined) => {
-      console.log('data', data);
-    },
-    []
-  );
+  const onClick = (data: { itemKey: React.ReactText; domEvent: MouseEvent; isOpen: boolean } | undefined) => {
+    console.log('data', data);
+  };
 
   const [isCollapsed, setIsCollapsed] = React.useState(false);
-  const onCollapseChange = React.useCallback((isCollapse: boolean) => {
+  const onCollapseChange = (isCollapse: boolean) => {
     setIsCollapsed(isCollapse);
-  }, []);
+  };
 
   React.useEffect(() => {
     const handleResize = () => {

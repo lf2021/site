@@ -4,6 +4,8 @@ const path = require('path');
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  // https://vitejs.dev/guide/static-deploy.html#github-pages
+  base: '/site/',
   plugins: [react()],
   build: {
     rollupOptions: {
@@ -18,7 +20,8 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      'src': path.resolve(__dirname, 'src'),
+      'src': path.resolve(__dirname, 'src/'),
+      '~': path.resolve(__dirname, '/')
     },
   },
   css: {
