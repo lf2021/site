@@ -50,7 +50,7 @@ div {
 ```
 
 效果图：
-![效果图](./../../public/images/border.png)
+![效果图](./../../site/images/border.png)
 
 ## margin/padding 设置百分比是相对谁的
 
@@ -386,13 +386,13 @@ DOM 的变化影响到了预算内宿的几何属性比如宽高，浏览器重�
 </div>
 ```
 
-![z-index1](../../public/images/z-index1.png)
+![z-index1](../../site/images/z-index1.png)
 
 > 上图中 div 的`z-index`均为整数的时候 div(a)的`z-index`虽然比 div(B)大，但是 div(A)和 div(a)是在一个堆叠上下文，而 div(B)和 div(b)是在一个堆叠上下文，这两个堆叠上下文是通过父级也就是 div(A)和 div(B)的`z-index`来决定层叠顺序的。
 
 ---
 
-![z-index1](../../public/images/z-index2.png)
+![z-index1](../../site/images/z-index2.png)
 
 > 上图将 div(A)的 z-index 设置为 auto，这时候因为`z-index: auto` 不会创建新的堆叠上下文，因而 div(a)的`z-index`比 div(B)大，所以 div(a)会在 div(B)的上面
 
@@ -655,7 +655,7 @@ div {
 ```
 
 效果图：
-![扇形](./../../public/images/扇形.png)
+![扇形](./../../site/images/扇形.png)
 
 ## CSS 画正方体
 
@@ -720,7 +720,7 @@ div {
 ```
 
 效果图：
-![正方体](./../../public/images/正方体.png)
+![正方体](./../../site/images/正方体.png)
 
 ## CSS 实现一个硬币旋转的效果
 
@@ -810,7 +810,7 @@ div {
 
 ## CSS 实现两列固定，中间自适应的布局
 
-![三栏布局效果图](../../public/images/三栏布局效果图.png)
+![三栏布局效果图](../../site/images/三栏布局效果图.png)
 
 > 左右各占 200px，中间随着窗口的调整自适应
 
