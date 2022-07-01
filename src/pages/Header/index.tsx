@@ -6,8 +6,8 @@ import styles from './style.module.less';
 const Header = () => {
   return (
     <div className={styles['header-content']}>
-      <Avatar alt="avatar" src={AvatarUrl} style={{ margin: '0 8px' }} />
-      <span>木子凡的小站</span>
+      <Avatar alt="avatar" src={AvatarUrl} className={styles['header-avatar']} />
+      <span style={{ fontSize: '16px' }}>木子小站</span>
     </div>
   );
 };

@@ -1,3 +1,4 @@
+
 ## vscode 配置相关
 
 ### Chinese (Simplified) (简体中文) Language Pack for Visual Studio Code 🌟🌟🌟
@@ -26,7 +27,7 @@
 
 - 可以一眼看到这段代码是谁提交的，或者这段代码最新的修改者是谁
 
-![gitlens](../assets/images/gitlens.png)
+![gitlens](../../site/images/gitlens.png)
 
 ### Git Graph 🌟🌟🌟🌟
 
@@ -34,7 +35,7 @@
 
 - 查看项目的 Git 图表，并从图表轻松的执行 Git 操作。
 
-![gitgraph](../assets/images/gitgraph.png)
+![gitgraph](../../site/images/gitgraph.png)
 
 ## Markdown 相关
 
@@ -97,7 +98,7 @@ GitHub Copilot 由 OpenAI Codex AI 系统提供支持，经过公共互联网文
 
 > 可以是一个备注的工具，标识一下你哪里还需要待完成的（TODO）、待修复的（FIXME）
 
-![todoTree](../assets/images/todotree.png)
+![todoTree](../../site/images/todotree.png)
 
 ### Path Intellisense 🌟🌟🌟🌟🌟
 
@@ -117,4 +118,4 @@ GitHub Copilot 由 OpenAI Codex AI 系统提供支持，经过公共互联网文
 
 > 支持 SVG 预览
 
-TODO: 待更新
+## TODO: 待更新

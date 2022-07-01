@@ -4,6 +4,8 @@ import { IconApartment, IconLayers, IconLikeThumb, IconUserGroup, IconWrench } f
 import { GlobalInfoCtx } from '@/components/GlobalProvider';
 
 import styles from './style.module.less';
+// import { mobileDetectHelper } from '@/utils';
+// import { isMobile } from '@/constants';
 
 const Sider = () => {
   const { updateGlobalInfo } = React.useContext(GlobalInfoCtx);
@@ -14,7 +16,7 @@ const Sider = () => {
         itemKey: 'basic',
         text: '基础篇',
         icon: <IconApartment />,
-        items: ['浏览器', '数据结构与算法', 'HTML', 'CSS', 'JavaScript 🌟'],
+        items: ['浏览器', '数据结构与算法', 'HTML', 'CSS', 'JavaScript'],
       },
       {
         itemKey: 'framework',
@@ -32,7 +34,7 @@ const Sider = () => {
         itemKey: 'code',
         text: '手撕代码',
         icon: <IconLikeThumb />,
-        items: ['面试高频手撕代码题 🌟', '剑指 offer 🌟', 'LeetCode 算法思路', '企业笔试题', '智力题'],
+        items: ['面试高频手撕代码题', '剑指 offer', 'LeetCode 算法思路', '企业笔试题', '智力题'],
       },
       {
         itemKey: 'combat',
@@ -48,23 +50,14 @@ const Sider = () => {
 
   const onClick = (data: { itemKey: React.ReactText; domEvent: MouseEvent; isOpen: boolean } | undefined) => {
     if (items.find(({ itemKey }) => itemKey === data?.itemKey)) return;
-    updateGlobalInfo({ navKey: data?.itemKey });
+    updateGlobalInfo({ navKey: data?.itemKey as string });
   };
 
-  const [isCollapsed, setIsCollapsed] = React.useState(false);
+  const isMobile = React.useMemo(() => window.visualViewport.width < 600, []);
+  const [isCollapsed, setIsCollapsed] = React.useState(isMobile);
   const onCollapseChange = (isCollapse: boolean) => {
     setIsCollapsed(isCollapse);
   };
-
-  React.useEffect(() => {
-    const handleResize = () => {
-      setIsCollapsed(Boolean(window.innerWidth < 1440));
-    };
-    window.addEventListener('resize', handleResize);
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    }
-  }, []);
 
   return (
     <Nav
@@ -75,7 +68,7 @@ const Sider = () => {
       defaultOpenKeys={defaultOpenKeys}
       onClick={onClick}
       className={styles['sider-nav']}
-      footer={{ collapseButton: true }}
+      footer={{ collapseButton: !isMobile }}
     />
   );
 };

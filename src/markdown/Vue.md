@@ -2,7 +2,7 @@
 
 - MVC: MVC是应用最广泛的软件架构之一,一般MVC分为:Model(模型),View(视图),Controller(控制器)。 这主要是基于分层的目的,让彼此的职责分开.View一般用过Controller来和Model进行联系。Controller是Model和View的协调者,View和Model不直接联系。基本都是单向联系。
 
-![MVC](./../assets/images/MVC.png)
+![MVC](./../../site/images/MVC.png)
 
 1. View传送指令到Controller。
 2. Controller完成业务逻辑后改变Model状态。
@@ -12,7 +12,7 @@
 
 View的变化会自动更新到ViewModel,ViewModel的变化也会自动同步到View上显示,通过数据来显示视图层。
 
-![MVVM](./../assets/images/MVVM.png)
+![MVVM](./../../site/images/MVVM.png)
 
 MVVM和MVC的区别:
 

@@ -25,9 +25,9 @@ killall SystemUIServer
 command + space 快速搜索电脑内的文档、App、邮件等等。
 
 - 打开某个 App
-  ![spotlight](@/assets/images/spotlight.png)
+  ![spotlight](../../site/images/spotlight.png)
 
 - 当计算器使用
-  ![spotlight-calculate](../assets/images/spotlight-calculate.png)
+  ![spotlight-calculate](../../site/images/spotlight-calculate.png)
 
-TODO: 待更新
+## TODO: 待更新

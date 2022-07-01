@@ -1,4 +1,5 @@
 .md-content {
+  position: relative;
   padding: 24px 300px 24px 32px;
   background-color: #f4f5f5;
   min-height: calc(100% - @header-height);
@@ -21,6 +22,11 @@
   ::-webkit-scrollbar-corner {
     background-color: none;
   }
+
+  image {
+    max-width: 900px !important;
+    height: auto;
+  }
 }
 
 .md-toc {
@@ -29,11 +35,10 @@
   background-color: rgba(255, 255, 255, 0.2);
   width: 240px;
   min-height: fit-content;
-  max-height: calc(100vh - 464px);
-  position: fixed;
+  // max-height: calc(100vh - 464px);
+  position: absolute;
   right: 48px;
   top: 200px;
-  bottom: 200px;
   overflow-y: auto;
 
   :global(.title-anchor) {

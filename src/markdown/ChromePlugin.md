@@ -11,7 +11,7 @@ https://github.com/zhaoolee/ChromeAppHeroes
 >
 > 这是我录制的一个视频链接: https://www.loom.com/share/75c6f6f9d40b4c99a5e13aec9f174601
 
-![Loom](../assets/images/loom.png)
+![Loom](../../site/images/loom.png)
 
 ## AdBlocker 插件 🌟🌟🌟🌟
 
@@ -22,8 +22,11 @@ https://github.com/zhaoolee/ChromeAppHeroes
 
 效果拿 CSDN 首页来说
 
-| ![未开启AdBlocker](../assets/images/withoutAdblocker.png) | ![已开启AdBlocker](../assets/images/withAdblocker.png) |
-| :------------------------------------------------: | :---------------------------------------------: |
+- 未开启AdBlocker
+![未开启AdBlocker](../../site/images/withoutAdblocker.png)
+
+- 已开启AdBlocker
+![已开启AdBlocker](../../site/images/withAdblocker.png)
 
 当然大家要理解网页上的广告行为，维护一个网站的开销还是不小的，作为网站的管理员接一些广告来增进收入也很合理。
 
@@ -33,7 +36,7 @@ https://github.com/zhaoolee/ChromeAppHeroes
 
 对于经常活跃在 GitHub 上的用户推荐可以安装一下这个插件，左侧会多出一个目录结构，便于你快速的查看当前项目的结构
 
-![Octotree](../assets/images/Octotree.png)
+![Octotree](../../site/images/Octotree.png)
 
 ## FEHelper（前端助手）🌟🌟🌟🌟
 
@@ -41,7 +44,7 @@ https://github.com/zhaoolee/ChromeAppHeroes
 
 默认只有 JSON 美化工具，其余功能需要自行安装，如下图：
 
-![FEHelper](../assets/images/FEHelper.png)
+![FEHelper](../../site/images/FEHelper.png)
 
 ## Omni 🌟🌟🌟
 
@@ -71,6 +74,6 @@ Omni 提供的快捷指令
 - ...
 
 标签页的效果
-![稀土掘金](../assets/images/juejin.jpg)
+![稀土掘金](../../site/images/juejin.jpg)
 
-TODO：待补充
+## TODO：待补充
