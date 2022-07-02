@@ -16,7 +16,7 @@ const App = () => {
   const { Header, Sider, Content } = Layout;
 
   return (
-    <GlobalInfoProvider initState={ initGlobalInfo }>
+    <GlobalInfoProvider initState={initGlobalInfo}>
       <Layout className={cls(styles['page'], isMobile && styles['page-mobile'])}>
         <Header className={cls([styles['page-header'], styles['page-header__ignore']])}>
           <HeaderContent />
