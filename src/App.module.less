@@ -1,3 +1,37 @@
+/* -------通用样式------- */
+
+// markdown 中插入的图片
+p > img {
+  width: 60vw;
+}
+
+// markdown 中代码块
+pre {
+  max-width: 70vw;
+  margin: 1vw 0;
+  padding: 1vw;
+  overflow-x: auto;
+  background-color: #2d333b;
+  border-radius: 1vw;
+  color: #adbac7;
+}
+
+h3 {
+  padding-left: 1vw;
+}
+
+li {
+  line-height: 1.5vw;
+}
+
+blockquote {
+  margin-left: 8px;
+  padding: 0 8px;
+  color: #57606a;
+  border-left: 4px solid #d0d7de;
+}
+
+/* -------pc 端样式------- */
 .page {
   height: 100%;
   
@@ -26,32 +60,17 @@
       height: 100%;
     }
   }
-
-  & img {
-    width: 70vw;
-  }
 }
 
-
-
-
-
-/* mobile 端样式 */
+/* ------mobile 端样式-------- */
 
 .page-mobile {
   height: 100vh;
-  font-size: 12px;
-  line-height: 64px;
+  font-size: 2.5vw;
+  line-height: 4vw;
 
   & li {
-    line-height: 64px;
-  }
-
-  & pre {
-    min-width: 100%;
-  }
-
-  & img {
-    width: 70vw;
+    line-height: 4vw;
   }
 }
+

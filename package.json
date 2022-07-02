@@ -5,7 +5,7 @@
   "homepage": "./",
   "scripts": {
     "echo": "node ./scripts/echo.js",
-    "dev": "yarn echo && vite",
+    "dev": "yarn echo && vite --host",
     "build": "yarn echo && tsc && vite build",
     "preview": "vite preview",
     "deploy": "gh-pages -d dist",
