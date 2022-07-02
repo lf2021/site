@@ -4,7 +4,7 @@ https://juejin.cn/post/6844904094281236487
 
 ## 什么是 webpack
 
-> 本质上，webpack 是一个用于现代 JavaScript 应用程序的 静态模块打包工具。当 webpack 处理应用程序时，它会在内部从一个或多个入口点构建一个 依赖图，然后将你项目中所需的每一个模块组合成一个或多个 bundles，它们均为静态资源，用于展示你的内容
+本质上，webpack 是一个用于现代 JavaScript 应用程序的 静态模块打包工具。当 webpack 处理应用程序时，它会在内部从一个或多个入口点构建一个 依赖图，然后将你项目中所需的每一个模块组合成一个或多个 bundles，它们均为静态资源，用于展示你的内容
 
 ## webpack 的作用是什么
 
@@ -14,15 +14,14 @@ https://juejin.cn/post/6844904094281236487
 
 ## webpack 核心模块
 
-- (1): 入口（entry）: 项目打包从哪里开始，打包的起点
-- (2): 出口（output）: 输出打包的文件的位置，以及名称
-- (3): loader: 用于转换某些类型的模块, webpack 只能处理 js,json 类型的文件，其他的类型的文件需要转换成 js 语言；将内联图片转换成 data url
+1. 入口（entry）: 项目打包从哪里开始，打包的起点
+2. 出口（output）: 输出打包的文件的位置，以及名称
+3. loader: 用于转换某些类型的模块, webpack 只能处理 js,json 类型的文件，其他的类型的文件需要转换成 js 语言；将内联图片转换成 data url
   两个属性：test：识别出哪些类型的文件会被转换；use： 使用哪些 loader 进行转换，loader 执行顺序：从右到左（或从下到上）
-- (4): plugin: 代码优化，资源管理
-- (5): 模块(modules)：在模块化编程中，开发者将程序分解为功能离散的 chunk，并称之为 模块。
+4. plugin: 代码优化，资源管理
+5. 模块(modules)：在模块化编程中，开发者将程序分解为功能离散的 chunk，并称之为 模块。
 
 ```js
-
 const path = require("path");
 const webpack = require("webpack");
 const htmlWebpackPlugin = require("html-webpack-plugin");
@@ -225,13 +224,10 @@ module.exports = smp.wrap(config);
 
 ## Webpack 的热更新原理
 
-```txt
 Webpack 的热更新又称热替换（Hot Module Replacement），缩写为 HMR。 这个机制可以做到不用刷新浏览器而将新变更的模块替换掉旧的模块。通过以下方式来加快开发速度：
 - 保留在完全重新加载页面期间丢失的应用程序状态。
 - 只更新变更内容，以节省宝贵的开发时间。
 - 在源代码中 CSS/JS 产生修改时，会立刻在浏览器中进行更新，这几乎相当于在浏览器 devtools 直接更改样式。
-
-```
 
 HMR 的核心就是浏览器从服务端拉取更新后的文件，通过 chunk diff 来更新变化后的修改。
 大概流程是我们用 webpack-dev-server 启动一个服务之后，浏览器和服务端之间维护了一个 Websocket 长连接，webpack 内部实现的 watch 就会监听文件修改，只要有修改，webpack 会重新打包编译到内存中，然后 webpack-dev-server 依赖中间件 webpack-dev-middleware 和 webpack 之间进行交互，每次热更新 webpack-dev-server 都会带上 hash 值的 json 文件和一个 js 向浏览器推送更新，让浏览器与上一次资源进行对比。浏览器对比出差异后会向 webpack-dev-server 发起 Ajax 请求来获取更改内容(文件列表、hash)，这样客户端就可以再借助这些信息继续向 WDS 发起 jsonp 请求获取该 chunk 的增量更新，至于内部原理，因为水平限制，目前还看不懂。
@@ -242,26 +238,27 @@ webpack-bundle-analyzer 生成 bundle 的模块组成图，显示所占体积
 
 ## Babel 原理？
 
-- 大概可以概括为三部分
+大概可以概括为三部分
 
-  - 解析（parse）：将代码（字符串）转换成 AST
-    - 将代码解析成抽象语法树（AST），每个 js 引擎（比如 Chrome 浏览器中的 V8 引擎）都有自己的 AST 解析器，而 Babel 是通过 Babylon 实现的。在解析过程中有两个阶段：词法分析和语法分析，词法分析阶段把字符串形式的代码转换为令牌（tokens）流，令牌类似于 AST 中节点；
-      语法分析阶段则会把一个令牌流转换成 AST 的形式，同时这个阶段会把令牌中的信息转换成 AST 的表述结构。
-  - 转化（transform）：按一定的规则转换、修改 AST，转换生成新的 AST
-    - 在这个阶段，Babel 接受得到 AST 并通过 babel-traverse 对其进行深度优先遍历，在此过程中对节点进行添加、更新及移除操作。这部分也是 Babel 插件介入工作的部分。
-  - 生成（generate）：以新的 AST 为基础将转换为代码
-    - 将经过转换的 AST 通过 babel-generator 再转换成 js 代码，过程就是深度优先遍历整个 AST，然后构建可以表示转换后代码的字符串。
+1. 解析（parse）：将代码（字符串）转换成 AST
+  - 将代码解析成抽象语法树（AST），每个 js 引擎（比如 Chrome 浏览器中的 V8 引擎）都有自己的 AST 解析器，而 Babel 是通过 Babylon 实现的。在解析过程中有两个阶段：词法分析和语法分析，词法分析阶段把字符串形式的代码转换为令牌（tokens）流，令牌类似于 AST 中节点；
+    语法分析阶段则会把一个令牌流转换成 AST 的形式，同时这个阶段会把令牌中的信息转换成 AST 的表述结构。
+2. 转化（transform）：按一定的规则转换、修改 AST，转换生成新的 AST
+  - 在这个阶段，Babel 接受得到 AST 并通过 babel-traverse 对其进行深度优先遍历，在此过程中对节点进行添加、更新及移除操作。这部分也是 Babel 插件介入工作的部分。
+3. 生成（generate）：以新的 AST 为基础将转换为代码
+  - 将经过转换的 AST 通过 babel-generator 再转换成 js 代码，过程就是深度优先遍历整个 AST，然后构建可以表示转换后代码的字符串。
 
 ## source map 是什么？生产环境怎么用？
 
-- 项目一般是将源码经过编译、打包、压缩等转换后，部署到生产环境，但是，当需要 debug 的时候，打包压缩后的代码不具备良好的可读性。
-- source map 是将编译、打包、压缩后的代码映射回源代码的过程。使得调试代码变得简单。
-- 线上环境一般有三种处理方案:
-  (1)hidden-source-map：可以查看错误代码准确信息，但不能追踪源代码错误，只能提示到构建后代码的错误位置。借助第三方错误监控平台 Sentry 使用
-  (2)sourcemap：可以查看错误代码准确信息和源代码的错误位置。通过 nginx 设置将 .map 文件只对白名单开放(公司内网)
-  (3)nosources-source-map：只会显示具体行数以及查看源代码的错误栈。安全性比 sourcemap 高
+项目一般是将源码经过编译、打包、压缩等转换后，部署到生产环境，但是，当需要 debug 的时候，打包压缩后的代码不具备良好的可读性。
+source map 是将编译、打包、压缩后的代码映射回源代码的过程。使得调试代码变得简单。
 
-- 配置： devtool: 'source-map'
+线上环境一般有三种处理方案:
+  1. hidden-source-map：可以查看错误代码准确信息，但不能追踪源代码错误，只能提示到构建后代码的错误位置。借助第三方错误监控平台 Sentry 使用
+  2. sourcemap：可以查看错误代码准确信息和源代码的错误位置。通过 nginx 设置将 .map 文件只对白名单开放(公司内网)
+  3. nosources-source-map：只会显示具体行数以及查看源代码的错误栈。安全性比 sourcemap 高
+
+配置： `devtool: 'source-map'`
 
 ## 为什么要代码分割，本质是什么？
 
@@ -275,11 +272,12 @@ webpack-bundle-analyzer 生成 bundle 的模块组成图，显示所占体积
 
 一般来说，影响 webpack 打包性能的因素：构建过程时间太长，打包结果体积太大
 
-- 提升构建速度
-  (1)优化 loader 配置
+提升构建速度的方式
 
-  - 缩小文件搜索范围，使用 include 和 exclude 指定或者排除需要 loader 搜索的路径
-  - 缓存 Babel 编译过的文件，下次只需要编译更改过的代码文件即可，加快打包时间
+1. 优化 loader 配置
+
+- 缩小文件搜索范围，使用 include 和 exclude 指定或者排除需要 loader 搜索的路径
+- 缓存 Babel 编译过的文件，下次只需要编译更改过的代码文件即可，加快打包时间
 
   ```js
   module.export = {
@@ -294,11 +292,12 @@ webpack-bundle-analyzer 生成 bundle 的模块组成图，显示所占体积
   };
   ```
 
-  (2)合理使用 resolve
-  对 webpack 的 resolve 参数进行合理配置，使用 resolve 字段告诉 webpack 怎么去搜索文件。
+2. 合理使用 resolve
 
-  - resolve.extensions:导入语句没带文件后缀时，webpack 会自动带上后缀后去查找文件是否存在，查询的顺序是按照配置的 resolve.extensions 顺序从前到后查找。所以应该将出现频率高的后缀排在前面
-  - resolve.alias:给导入路径取一个别名，能把原导入路径映射成一个新的导入路
+    > 对 webpack 的 resolve 参数进行合理配置，使用 resolve 字段告诉 webpack 怎么去搜索文件。
+
+- resolve.extensions:导入语句没带文件后缀时，webpack 会自动带上后缀后去查找文件是否存在，查询的顺序是按照配置的 resolve.extensions 顺序从前到后查找。所以应该将出现频率高的后缀排在前面
+- resolve.alias:给导入路径取一个别名，能把原导入路径映射成一个新的导入路
 
   ```js
   const config = {
@@ -309,94 +308,92 @@ webpack-bundle-analyzer 生成 bundle 的模块组成图，显示所占体积
   };
   ```
 
-  (3)压缩代码
+3. 压缩代码
 
-  - webpack-paralle-uglify-plugin 并行运行 UglifyJS 压缩代码
-  - uglifyjs-webpack-plugin 开启 parallel 参数 (不支持 ES6, webpack4 之前)
-  - terser-webpack-plugin 开启 parallel 参数(支持 es6，webpack4)
-  - 通过 mini-css-extract-plugin 提取 Chunk 中的 CSS 代码到单独文件，通过 css-loader 的 minimize 选项开启 cssnano 压缩 CSS。
+- webpack-paralle-uglify-plugin 并行运行 UglifyJS 压缩代码
+- uglifyjs-webpack-plugin 开启 parallel 参数 (不支持 ES6, webpack4 之前)
+- terser-webpack-plugin 开启 parallel 参数(支持 es6，webpack4)
+- 通过 mini-css-extract-plugin 提取 Chunk 中的 CSS 代码到单独文件，通过 css-loader 的 minimize 选项开启 cssnano 压缩 CSS。
 
-  (4)DllPlugin 插件 提前打包类库（预编译）
-  DllPlugin 可以将类库提前打包并引入。在首次构建时将第三方库单独打包到一个文件中（eg: react， antd， moment 等库），只有当类库更新版本才有需要重新打包，这种方式可以极大的减少打包类库的次数。同时也将公共代码抽离成单独的文件。
+4. DllPlugin 插件 提前打包类库（预编译）
+  
+    > DllPlugin 可以将类库提前打包并引入。在首次构建时将第三方库单独打包到一个文件中（eg: react， antd， moment 等库），只有当类库更新版本才有需要重新打包，这种方式可以极大的减少打包类库的次数。同时也将公共代码抽离成单独的文件。
 
-  - 步骤一：单独配置一个 webpack.dll.config.js 文件，打包第三方库代码
+     - 步骤一：单独配置一个 webpack.dll.config.js 文件，打包第三方库代码
 
-  ```js
-  const webpack = require('webpack');
-  const path = require('path');
+    ```js
+    const webpack = require('webpack');
+    const path = require('path');
 
-  // 想统一打包的类库
-  const vendors_manage = ['react', 'react-dom', 'moment', 'bizcharts', 'antd', 'lodash', 'underscore'];
+    // 想统一打包的类库
+    const vendors_manage = ['react', 'react-dom', 'moment', 'bizcharts', 'antd', 'lodash', 'underscore'];
 
 
-  module.exports = {
-    output: {
-      path: path.resolve(**dirname, 'public'),
-      filename: '[name].dll.js',
-      library: '_dll_[name]',
-    },
-    entry: {
-      vendors*manage,
-    },
-    plugins: [
-      new webpack.DllPlugin({
-        name: '\_dll*[name]', // DllPlugin 的 name 属性需要和 output.libary 保持一致
-        path: 'manifest.json',
-        context: **dirname, // context 需要和 DllReferencePlugin 中的保持一致
-       }),
-      ],
-    };
-  ```
-
-````
-
-- 步骤二：在 webpack.config.js 中，打包项目代码
-
-```js
-const webpack = require('webpack')
-module.exports = function wp(webpackConfig)（{
-  webpackConfig.plugins.push(new webpack.DllReferencePlugin({
-      context: __dirname,
-      // manifest.json 就是之前打包出来的 json 文件
-      manifest: require('./manifest.json')
-    }),
-
-})
-}）
-````
-
-npm run build:dll 运行这个配置文件，dist 里会出现 vendors_manage.dll.js 模块库文件和 manifest.json 模块映射文件其中 vender-menifest.json 标明了模块路径和模块 ID（由 webpack 产生）的映射关系。
-
-```js
-{ "name": '_dll_vendors_manage' "content": { './node_modules/.npminstall/loadsh/4.17.2/loadsh/loadsh.js':1
-'./node_modules/.npminstall/webpack/1.17.2/webpack/module.js':2
-'./node_modules/.npminstall/react/16.17.2/react/react.js':3 } }
-```
-
-(5) happypack 多进程编译
-受限于 Node 是单线程运行的，所以 Webpack 在打包的过程中也是单线程的，特别是在执行 Loader 的时候，长时间编译的任务很多，这样就会导致等待的情况。
-
-```js
-const webpack = require('webpack');
-const HappyPack = require('happypack');
-
-module.exports = {
-  plugins: [
-    new HappyPack({
-      // id标识happypack处理那一类文件
-      id: 'happyBabel',
-      // 配置loader
-      loaders: ['babel-loader?cacheDirectory=true'],
-    }),
-  ],
-  module: {
-    rules: [
-      {
-        test: /\.js$/,
-        loader: 'happypack/loader?id=happyBabel',
-        // 将.js文件交给id为happyBabel的happypack实例来执行
+    module.exports = {
+      output: {
+        path: path.resolve(**dirname, 'public'),
+        filename: '[name].dll.js',
+        library: '_dll_[name]',
       },
-    ],
-  },
-};
-```
+      entry: {
+        vendors*manage,
+      },
+      plugins: [
+        new webpack.DllPlugin({
+          name: '\_dll*[name]', // DllPlugin 的 name 属性需要和 output.libary 保持一致
+          path: 'manifest.json',
+          context: **dirname, // context 需要和 DllReferencePlugin 中的保持一致
+        }),
+        ],
+      };
+    ```
+
+     - 步骤二：在 webpack.config.js 中，打包项目代码
+
+    ```js
+    const webpack = require('webpack');
+    module.exports = function wp(webpackConfig)（{
+      webpackConfig.plugins.push(new webpack.DllReferencePlugin({
+        context: __dirname,
+        // manifest.json 就是之前打包出来的 json 文件
+        manifest: require('./manifest.json')
+      }),
+    });
+    ```
+
+    npm run build:dll 运行这个配置文件，dist 里会出现 vendors_manage.dll.js 模块库文件和 manifest.json 模块映射文件其中 vender-menifest.json 标明了模块路径和模块 ID（由 webpack 产生）的映射关系。
+
+    ```js
+    { "name": '_dll_vendors_manage' "content": { './node_modules/.npminstall/loadsh/4.17.2/loadsh/loadsh.js':1
+    './node_modules/.npminstall/webpack/1.17.2/webpack/module.js':2
+    './node_modules/.npminstall/react/16.17.2/react/react.js':3 } }
+    ```
+
+5. happypack 多进程编译
+
+    受限于 Node 是单线程运行的，所以 Webpack 在打包的过程中也是单线程的，特别是在执行 Loader 的时候，长时间编译的任务很多，这样就会导致等待的情况。
+
+    ```js
+    const webpack = require('webpack');
+    const HappyPack = require('happypack');
+
+    module.exports = {
+      plugins: [
+        new HappyPack({
+          // id标识happypack处理那一类文件
+          id: 'happyBabel',
+          // 配置loader
+          loaders: ['babel-loader?cacheDirectory=true'],
+        }),
+      ],
+      module: {
+        rules: [
+          {
+            test: /\.js$/,
+            loader: 'happypack/loader?id=happyBabel',
+            // 将.js文件交给id为happyBabel的happypack实例来执行
+          },
+        ],
+      },
+    };
+    ```
