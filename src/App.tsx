@@ -1,8 +1,9 @@
 import React from 'react';
+import { Route, Routes } from 'react-router-dom';
 import { Layout } from '@douyinfe/semi-ui';
-import HeaderContent from './pages/Header';
-import SiderContent from './pages/Sider';
-import MarkdownContent from './pages/Content';
+import HeaderContent from '@/components/Header';
+import Home from './pages/Home';
+import Changelog from '@/pages/Changelog';
 import { GlobalInfoProvider } from './components/GlobalProvider';
 import cls from 'classnames';
 import { isMobile } from './constants';
@@ -18,17 +19,16 @@ const App = () => {
   return (
     <GlobalInfoProvider initState={initGlobalInfo}>
       <Layout className={cls(styles['page'], isMobile && styles['page-mobile'])}>
-        <Header className={cls([styles['page-header'], styles['page-header__ignore']])}>
+        <Header className={styles['page-header']}>
           <HeaderContent />
         </Header>
-        <Layout className={styles['page-body__ignore']}>
-          <Sider className={styles['page-sider']}>
-            <SiderContent />
-          </Sider>
-          <Content>
-            <MarkdownContent />
-          </Content>
-        </Layout>
+
+        <Routes>
+          <Route path="/site">
+            <Route path="/site/home" element={<Home />} />
+            <Route path="changelog" element={<Changelog />} />
+          </Route>
+        </Routes>
       </Layout>
     </GlobalInfoProvider>
   );

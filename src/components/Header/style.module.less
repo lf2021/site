@@ -1,0 +1,25 @@
+.header-content {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+
+  & .header-avatar {
+    margin: 0 16px;
+  }
+
+  & .header-tag {
+    padding: 6px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+
+    &:hover,
+    &.header-tag-active {
+      border-bottom: 2px solid #ccc;
+      box-shadow: -1px -1px 4px #ccc;
+      border-radius: 4px;
+    }
+  }
+}
+
