@@ -30,3 +30,6 @@ react 项目引用markdown文件并解析，[参考文档](https://juejin.cn/pos
 打包优化 https://juejin.cn/post/7081628820188430344
 - rollup-plugin-visualizer 打包体积可视化
 - vite-plugin-imagemin 打包图片压缩
+
+问题
+- 打开具体某个路由的时候 404，https://github.com/madneal/articles-translator/blob/master/Github%20Pages%E4%BB%A5%E5%8F%8A%E5%8D%95%E9%A1%B5%E9%9D%A2%E5%BA%94%E7%94%A8.md
