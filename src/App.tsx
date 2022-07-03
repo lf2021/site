@@ -14,7 +14,7 @@ import styles from './App.module.less';
 
 const App = () => {
   const [initGlobalInfo, _] = React.useState<IInitState>(() => ({ navKey: '浏览器' }));
-  const { Header, Sider, Content } = Layout;
+  const { Header } = Layout;
 
   return (
     <GlobalInfoProvider initState={initGlobalInfo}>
@@ -23,12 +23,14 @@ const App = () => {
           <HeaderContent />
         </Header>
 
-        <Routes>
-          <Route path="/site">
-            <Route path="/site/home" element={<Home />} />
-            <Route path="changelog" element={<Changelog />} />
-          </Route>
-        </Routes>
+        <Layout className={styles['page-body']}>
+          <Routes>
+            <Route path="/site">
+              <Route path="/site/home" element={<Home />} />
+              <Route path="changelog" element={<Changelog />} />
+            </Route>
+          </Routes>
+        </Layout>
       </Layout>
     </GlobalInfoProvider>
   );

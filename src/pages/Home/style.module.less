@@ -1,7 +1,3 @@
-.page-body {
-  height: calc(100vh - @header-height);
-}
-
 .page-sider {
   // width: @sider-width;
   height: 100%;
@@ -15,6 +11,25 @@
 
   :global(.semi-navigation-inner) {
     overflow: auto;
+  }
+
+  /* 滚动条自定义 */
+  ::-webkit-scrollbar {
+    /*纵向滚动条*/
+    width: 2px;
+    /*横向滚动条*/
+    height: 2px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: #cfcfd1;
+    border-radius: 3px;
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: none;
+  }
+  ::-webkit-scrollbar-corner {
+    background-color: none;
   }
 }
 

@@ -18,7 +18,7 @@ const Header = () => {
         to: '/site/changelog',
       },
     ],
-    [window.location.pathname]
+    []
   );
 
   return (

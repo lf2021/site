@@ -1,0 +1,29 @@
+.changelog-wrapper {
+  width: 100vw;
+  height: 100%;
+
+  :global(.semi-timeline) {
+    box-sizing: border-box;
+  }
+
+  & .changelog-guide {
+    width: 70vw;
+    margin: 16px 15vw;
+  }
+}
+
+.changelog-wrapper-pc {
+  :global(.semi-timeline-center .semi-timeline-item-left .semi-timeline-item-content) {
+    left: calc(20% - 14px);
+    width: calc(80% - 14px);
+    padding-left: 16px;
+  }
+
+  :global(.semi-timeline-center .semi-timeline-item-head) {
+    left: 20%;
+  }
+
+  :global(.semi-timeline-item-tail) {
+    left: 20%;
+  }
+}
