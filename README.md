@@ -26,3 +26,7 @@ react 项目引用markdown文件并解析，[参考文档](https://juejin.cn/pos
 
 环境部署
 - 用了 github 提供的开源依赖 gh-pages，可自行去 npm 上查看用法
+
+打包优化 https://juejin.cn/post/7081628820188430344
+- rollup-plugin-visualizer 打包体积可视化
+- vite-plugin-imagemin 打包图片压缩
