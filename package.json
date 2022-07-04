@@ -6,10 +6,9 @@
   "scripts": {
     "echo": "node ./scripts/echo.js",
     "dev": "yarn echo && vite --host",
-    "build": "yarn echo && tsc && vite build",
+    "build": "yarn echo && tsc && vite build && node ./scripts/build.js",
     "preview": "vite preview",
-    "deploy": "gh-pages -d dist",
-    "predeploy": "yarn build"
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@douyinfe/semi-ui": "^2.13.0",
