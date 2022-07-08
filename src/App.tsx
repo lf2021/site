@@ -12,10 +12,25 @@ import type { IInitState } from './components/GlobalProvider/type';
 
 import styles from './App.module.less';
 
+// use: https://marketplace.visualstudio.com/items?itemName=helixquar.asciidecorator
+const welcomeText = `
+██╗  ██╗███████╗███████╗██████╗     ██████╗ ██╗   ██╗███╗   ██╗███╗   ██╗██╗███╗   ██╗ ██████╗ ██╗
+██║ ██╔╝██╔════╝██╔════╝██╔══██╗    ██╔══██╗██║   ██║████╗  ██║████╗  ██║██║████╗  ██║██╔════╝ ██║
+█████╔╝ █████╗  █████╗  ██████╔╝    ██████╔╝██║   ██║██╔██╗ ██║██╔██╗ ██║██║██╔██╗ ██║██║  ███╗██║
+██╔═██╗ ██╔══╝  ██╔══╝  ██╔═══╝     ██╔══██╗██║   ██║██║╚██╗██║██║╚██╗██║██║██║╚██╗██║██║   ██║╚═╝
+██║  ██╗███████╗███████╗██║         ██║  ██║╚██████╔╝██║ ╚████║██║ ╚████║██║██║ ╚████║╚██████╔╝██╗
+╚═╝  ╚═╝╚══════╝╚══════╝╚═╝         ╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═══╝╚═╝  ╚═══╝╚═╝╚═╝  ╚═══╝ ╚═════╝ ╚═╝
+`;
+
+console.log(welcomeText);
+
 const App = () => {
   const [initGlobalInfo, _] = React.useState<IInitState>(() => ({ navKey: '浏览器' }));
   const { Header } = Layout;
-
+  window.Logger({
+    title: 'Test title',
+    content: { name: { age: 18 } }
+  });
   return (
     <GlobalInfoProvider initState={initGlobalInfo}>
       <Layout className={cls(styles['page'], isMobile && styles['page-mobile'])}>

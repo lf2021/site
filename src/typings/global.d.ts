@@ -6,3 +6,14 @@ declare module '*.md' {
 }
 
 declare module 'markdown-navbar';
+
+type ILogger = {
+  title: string;
+  content: any;
+}
+declare interface IGlobalVariables {
+  Logger(params: ILogger): void
+}
+
+declare interface Window extends IGlobalVariables {}
+declare interface global extends IGlobalVariables {}
