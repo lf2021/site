@@ -1,4 +1,22 @@
-export const changelogs = [
+import { IContent } from "@/pages/Changelog/interface";
+
+interface IChangeLog {
+  time: string;
+  content: IContent;
+  type: 'success',
+}
+
+export const changelogs: Array<IChangeLog> = [
+  {
+    time: '2022-07-10',
+    content: {
+      Chore: [
+        { desc: '参考知乎，在网站控制台输出颜文字。' },
+        { desc: '封装了一套 logger 方法，便于调试的方便与精准。' },
+      ],
+    },
+    type: "success",
+  },
   {
     time: '2022-07-03',
     content: {

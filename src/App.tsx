@@ -7,6 +7,7 @@ import Changelog from '@/pages/Changelog';
 import { GlobalInfoProvider } from './components/GlobalProvider';
 import cls from 'classnames';
 import { isMobile } from './constants';
+import chalk from 'chalk';
 
 import type { IInitState } from './components/GlobalProvider/type';
 
@@ -22,14 +23,14 @@ const welcomeText = `
 ╚═╝  ╚═╝╚══════╝╚══════╝╚═╝         ╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═══╝╚═╝  ╚═══╝╚═╝╚═╝  ╚═══╝ ╚═════╝ ╚═╝
 `;
 
-console.log(welcomeText);
+console.log(chalk.green(welcomeText));
 
 const App = () => {
   const [initGlobalInfo, _] = React.useState<IInitState>(() => ({ navKey: '浏览器' }));
   const { Header } = Layout;
   window.Logger({
     title: 'Test title',
-    content: { name: { age: 18 } }
+    content: { name: { age: 18 } },
   });
   return (
     <GlobalInfoProvider initState={initGlobalInfo}>
@@ -41,7 +42,7 @@ const App = () => {
         <Layout className={styles['page-body']}>
           <Routes>
             <Route path="/site">
-              <Route path="/site/home" element={<Home />} />
+              <Route path="home" element={<Home />} />
               <Route path="changelog" element={<Changelog />} />
             </Route>
           </Routes>

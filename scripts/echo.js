@@ -1,7 +1,7 @@
 // 可以使用 vscode 插件 ASCIIDecorator 来生成这种文字
 // use: https://marketplace.visualstudio.com/items?itemName=helixquar.asciidecorator
 
-console.log(`
+const text = `
                                                                                                
                                 88                                                           
                                 88                                                           
@@ -13,4 +13,6 @@ console.log(`
     YP      YP       '"Ybbd8"'  88   '"Ybbd8"'   '"YbbdP"'   88      88      88   '"Ybbd8"'  
                                                                                              
                                                                                              
-`)
+`;
+
+console.log(text);
