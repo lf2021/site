@@ -8,6 +8,15 @@ interface IChangeLog {
 
 export const changelogs: Array<IChangeLog> = [
   {
+    time: '2022-07-15',
+    content: {
+      Feature: [
+        { desc: '点击头像会回到首页，并在首页上通过 iframe 的形式实现了一个获取情话的功能' }
+      ]
+    },
+    type: 'success'
+  },
+  {
     time: '2022-07-10',
     content: {
       Chore: [

@@ -10,11 +10,11 @@ const Header = () => {
     () => [
       {
         name: 'Home',
-        to: '/site/home',
+        to: '/site/?path=home',
       },
       {
         name: 'Changelog',
-        to: '/site/changelog',
+        to: '/site/?path=changelog',
       },
     ],
     []
@@ -22,11 +22,11 @@ const Header = () => {
 
   return (
     <div className={styles['header-content']}>
-      <Avatar
-        alt="avatar"
-        className={styles['header-avatar']}>
-        Lee
-      </Avatar>
+      <NavLink to="/site/" style={{ textDecoration: 'none' }}>
+        <Avatar alt="avatar" className={styles['header-avatar']}>
+          Lee
+        </Avatar>
+      </NavLink>
       <span>木子小站</span>
       <Space wrap spacing="loose" style={{ marginLeft: '16px' }}>
         {paths.map(({ name, to }) => (
