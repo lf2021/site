@@ -1,3 +1,3 @@
 export * from './common';
-export * from './log'
-export * from './tools'
+export * from './log';
+export * from './tools';

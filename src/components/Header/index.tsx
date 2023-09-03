@@ -13,6 +13,10 @@ const Header = () => {
         to: '/site/?path=home',
       },
       {
+        name: 'Blog',
+        to: '/site/?path=blog',
+      },
+      {
         name: 'Tools',
         to: '/site/?path=tools',
       },

@@ -42,7 +42,7 @@ const Item = ({ items }: { items: IContentItem }): JSX.Element => {
       {items.map(({ desc, link, linkTitle }) => (
         <li key={desc}>
           {desc}
-          <a href={link} target="_blank" style={{ marginLeft: '8px' }}>
+          <a href={link} target="_blank" style={{ marginLeft: '8px' }} rel="noreferrer">
             {linkTitle}
           </a>
         </li>

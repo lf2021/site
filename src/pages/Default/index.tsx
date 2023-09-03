@@ -1,6 +1,6 @@
-import React from "react";
-import { Button } from "@douyinfe/semi-ui";
-import { debounce } from "lodash";
+import React from 'react';
+import { Button } from '@douyinfe/semi-ui';
+import { debounce } from 'lodash';
 import $s from './style.module.less';
 
 const Default = () => {
@@ -17,10 +17,10 @@ const Default = () => {
         </Button>
       </div>
       <div className={$s['sweetContent']}>
-        <iframe frameBorder="0" width="50%" src={src}></iframe>
+        <iframe frameBorder="0" width="50%" src={src} />
       </div>
     </div>
   );
-}
+};
 
 export default Default;

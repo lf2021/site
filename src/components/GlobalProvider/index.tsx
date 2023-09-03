@@ -1,7 +1,7 @@
-import React from "react"
-import type { IGlobalInfoCtx, IGlobalInfoProviderProps, IInitState } from "./type";
+import React from 'react';
+import { IGlobalInfoCtx, IGlobalInfoProviderProps, IInitState } from './type';
 
-export const GlobalInfoCtx = React.createContext({} as IGlobalInfoCtx)
+export const GlobalInfoCtx = React.createContext({} as IGlobalInfoCtx);
 
 export const GlobalInfoProvider = (props: React.PropsWithChildren<IGlobalInfoProviderProps>) => {
   const { initState, children } = props;
@@ -11,7 +11,7 @@ export const GlobalInfoProvider = (props: React.PropsWithChildren<IGlobalInfoPro
     if (typeof next === 'function') {
       setGlobalInfo((prevStates: IInitState) => ({
         ...prevStates,
-        ...next(prevStates as any),
+        ...next(prevStates as IInitState)
       }));
     } else setGlobalInfo((prevStates: IInitState) => ({ ...prevStates, ...next }));
   };

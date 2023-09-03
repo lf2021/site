@@ -9,11 +9,11 @@ declare module 'markdown-navbar';
 
 type ILogger = {
   title: string;
-  content: any;
+  content: unknown;
   isCollapsed?: boolean;
 };
 declare interface IGlobalVariables {
-  Logger(params: ILogger): void
+  Logger(params: ILogger): void;
 }
 
 declare interface Window extends IGlobalVariables {}

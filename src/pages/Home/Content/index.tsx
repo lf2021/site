@@ -13,10 +13,10 @@ const content = () => {
 
   const mdRef = React.useRef<HTMLDivElement>(null);
 
-  const onHashChange = (newHash: any, oldHash: any) => {
-    const nodeList = mdRef.current?.childNodes || [];
+  const onHashChange = (newHash: string) => {
+    const nodeList = mdRef.current!.childNodes || [];
     for (let i = 0; i < nodeList.length; i++) {
-      const node: any = nodeList[i];
+      const node: ChildNode = nodeList[i];
       if (node?.dataset?.id === newHash) {
         node?.scrollIntoView();
         return;
@@ -41,6 +41,7 @@ const content = () => {
   return (
     <div className={styles['md-content']} ref={mdRef}>
       {showToc && <MarkNav className={styles['md-toc']} source={md} ordered={true} onHashChange={onHashChange} />}
+      {/* eslint-disable-next-line react/no-children-prop */}
       <ReactMarkdown children={md} remarkPlugins={[remarkGfm]} />
     </div>
   );

@@ -3,7 +3,7 @@ import { useLocation } from 'react-router-dom';
 import { Layout } from '@douyinfe/semi-ui';
 import cls from 'classnames';
 import { GlobalInfoProvider, HeaderContent } from './components';
-import { Default, Home, Changelog, Tools} from '@/pages';
+import { Default, Home, Changelog, Tools, Blog } from '@/pages';
 import { welcomeText, isMobile } from "@/constants";
 
 import type { IInitState } from './components/GlobalProvider/type';
@@ -14,13 +14,14 @@ console.log(`%c${welcomeText}`, 'color: green');
 
 const components: Record<string, JSX.Element> = {
   home: <Home />,
-  changelog: <Changelog />,
+  blog: <Blog />,
   tools: <Tools />,
+  changelog: <Changelog />,
   default: <Default />,
 };
 
 const App = () => {
-  const [initGlobalInfo, _] = React.useState<IInitState>(() => ({ navKey: '浏览器' }));
+  const [initGlobalInfo] = React.useState<IInitState>(() => ({ navKey: '浏览器' }));
   const { Header } = Layout;
   
   window.Logger({

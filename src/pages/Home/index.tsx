@@ -1,3 +1,4 @@
+import React from 'react';
 import { Layout } from '@douyinfe/semi-ui';
 import NavSide from './NavSide';
 import MarkdownContent from './Content';
@@ -9,7 +10,7 @@ const Home = () => {
 
   return (
     <>
-      <Sider className={styles["page-sider"]}>
+      <Sider className={styles['page-sider']}>
         <NavSide />
       </Sider>
       <Content>

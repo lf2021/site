@@ -1,32 +1,26 @@
-import { IContent } from "@/pages/Changelog/interface";
+import { IContent } from '@/pages/Changelog/interface';
 
 interface IChangeLog {
   time: string;
   content: IContent;
-  type: 'success',
+  type: 'success';
 }
 
 export const changelogs: Array<IChangeLog> = [
   {
     time: '2023-09-03',
     content: {
-      BreakingChange: [
-        { desc: '导航栏新增 Tools 选项，且支持了时间戳的转换功能' }
-      ],
-      Chore: [
-        { desc: '收敛了组件的导入导出结构' }
-      ]
+      BreakingChange: [{ desc: '导航栏新增 Tools 选项，且支持了时间戳的转换功能' }],
+      Chore: [{ desc: '收敛了组件的导入导出结构' }],
     },
     type: 'success',
   },
   {
     time: '2022-07-15',
     content: {
-      Feature: [
-        { desc: '点击头像会回到首页，并在首页上通过 iframe 的形式实现了一个获取情话的功能' }
-      ]
+      Feature: [{ desc: '点击头像会回到首页，并在首页上通过 iframe 的形式实现了一个获取情话的功能' }],
     },
-    type: 'success'
+    type: 'success',
   },
   {
     time: '2022-07-10',
@@ -36,7 +30,7 @@ export const changelogs: Array<IChangeLog> = [
         { desc: '封装了一套 logger 方法，便于调试的方便与精准。' },
       ],
     },
-    type: "success",
+    type: 'success',
   },
   {
     time: '2022-07-03',
@@ -54,7 +48,8 @@ export const changelogs: Array<IChangeLog> = [
         { desc: '增加了打包体积可视化，对静态图片打包进行了压缩' },
         {
           desc: '增加404页面兜底，解决github pages静态路由的问题',
-          link: 'https://github.com/madneal/articles-translator/blob/master/Github%20Pages%E4%BB%A5%E5%8F%8A%E5%8D%95%E9%A1%B5%E9%9D%A2%E5%BA%94%E7%94%A8.md#%E7%AC%AC%E5%9B%9B%E9%83%A8%E5%88%86%E8%B7%AF%E7%94%B1',
+          link:
+            'https://github.com/madneal/articles-translator/blob/master/Github%20Pages%E4%BB%A5%E5%8F%8A%E5%8D%95%E9%A1%B5%E9%9D%A2%E5%BA%94%E7%94%A8.md#%E7%AC%AC%E5%9B%9B%E9%83%A8%E5%88%86%E8%B7%AF%E7%94%B1',
           linkTitle: '直接访问子路由404',
         },
       ],

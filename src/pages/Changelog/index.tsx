@@ -1,10 +1,11 @@
+import React from 'react';
 import { Divider, Timeline } from '@douyinfe/semi-ui';
 import Content from './Content.tsx';
 import { isMobile } from '@/constants';
 import { changelogs } from '@/data/changelog';
 import cls from 'classnames';
 
-import type { IType } from './interface';
+import { IType } from './interface';
 
 import styles from './style.module.less';
 

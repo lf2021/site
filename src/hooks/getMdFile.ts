@@ -1,5 +1,5 @@
-import React from "react";
-import { GlobalInfoCtx } from "@/components/GlobalProvider";
+import React from 'react';
+import { GlobalInfoCtx } from '@/components/GlobalProvider';
 // import { getMdFileUrl } from '@/utils';
 
 import $1 from '@/markdown/浏览器.md?url';
@@ -25,12 +25,12 @@ const navMap: Record<string, string> = {
   数据结构与算法: $2,
   HTML: $3,
   CSS: $4,
-  'JavaScript': $5,
+  JavaScript: $5,
   Vue: $6,
   React: $7,
   Git: $8,
   Webpack: $9,
-  '面试高频手撕代码题': $10,
+  面试高频手撕代码题: $10,
   '剑指 offer': $11,
   'LeetCode 算法思路': $12,
   企业笔试题: $13,
@@ -54,9 +54,9 @@ export const getMdFile = () => {
         setMd(text);
       })
       .catch(() => {
-        console.log('加载失败');
+        console.error('加载失败');
       });
   }, [globalInfo.navKey]);
 
-  return { md }
-}
+  return { md };
+};
