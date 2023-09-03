@@ -10,7 +10,8 @@ declare module 'markdown-navbar';
 type ILogger = {
   title: string;
   content: any;
-}
+  isCollapsed?: boolean;
+};
 declare interface IGlobalVariables {
   Logger(params: ILogger): void
 }

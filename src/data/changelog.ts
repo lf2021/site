@@ -8,6 +8,18 @@ interface IChangeLog {
 
 export const changelogs: Array<IChangeLog> = [
   {
+    time: '2023-09-03',
+    content: {
+      BreakingChange: [
+        { desc: '导航栏新增 Tools 选项，且支持了时间戳的转换功能' }
+      ],
+      Chore: [
+        { desc: '收敛了组件的导入导出结构' }
+      ]
+    },
+    type: 'success',
+  },
+  {
     time: '2022-07-15',
     content: {
       Feature: [

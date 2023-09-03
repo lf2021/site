@@ -1,5 +1,5 @@
 import { Layout } from '@douyinfe/semi-ui';
-import SiderContent from './Sider';
+import NavSide from './NavSide';
 import MarkdownContent from './Content';
 
 import styles from './style.module.less';
@@ -9,8 +9,8 @@ const Home = () => {
 
   return (
     <>
-      <Sider className={styles['page-sider']}>
-        <SiderContent />
+      <Sider className={styles["page-sider"]}>
+        <NavSide />
       </Sider>
       <Content>
         <MarkdownContent />

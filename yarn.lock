@@ -341,20 +341,19 @@
     "@babel/plugin-syntax-jsx" "^7.17.12"
     "@babel/types" "^7.17.12"
 
-"@babel/runtime-corejs3@^7.15.4":
-  version "7.18.3"
-  resolved "http://bnpm.byted.org/@babel/runtime-corejs3/-/runtime-corejs3-7.18.3.tgz"
-  integrity sha512-l4ddFwrc9rnR+EJsHsh+TJ4A35YqQz/UqcjtlX2ov53hlJYG5CxtQmNZxyajwDVmCxwy++rtvGU5HazCK4W41Q==
-  dependencies:
-    core-js-pure "^3.20.2"
-    regenerator-runtime "^0.13.4"
-
-"@babel/runtime@^7.0.0", "@babel/runtime@^7.2.0":
+"@babel/runtime@^7.0.0":
   version "7.18.3"
   resolved "http://bnpm.byted.org/@babel/runtime/-/runtime-7.18.3.tgz"
   integrity sha512-38Y8f7YUhce/K7RMwTp7m0uCumpv9hZkitCbBClqQIow1qSbCvGkcegKOXpEWCQLfWmevgRiWokZ1GkpfhbZug==
   dependencies:
     regenerator-runtime "^0.13.4"
+
+"@babel/runtime@^7.21.0":
+  version "7.22.11"
+  resolved "http://bnpm.byted.org/@babel/runtime/-/runtime-7.22.11.tgz#7a9ba3bbe406ad6f9e8dd4da2ece453eb23a77a4"
+  integrity sha512-ee7jVNlWN09+KftVOu9n7S8gQzD/Z6hN/I8VBRXW4P1+Xe7kJGXMwu8vds4aGIMHZnNbdpSWCfZZtinytpcAvA==
+  dependencies:
+    regenerator-runtime "^0.14.0"
 
 "@babel/runtime@^7.7.6":
   version "7.18.6"
@@ -429,89 +428,113 @@
     "@babel/helper-validator-identifier" "^7.16.7"
     to-fast-properties "^2.0.0"
 
-"@douyinfe/semi-animation-react@2.13.0":
-  version "2.13.0"
-  resolved "http://bnpm.byted.org/@douyinfe/semi-animation-react/-/semi-animation-react-2.13.0.tgz"
-  integrity sha512-uvFbyICgRrIpL0+DDyvJASUxhKhnL9mhgvaFkjC+FCttguI0q35kZSjItqL/BpFUww02J3WDAJMCNgyRbck6/A==
+"@dnd-kit/accessibility@^3.0.0":
+  version "3.0.1"
+  resolved "http://bnpm.byted.org/@dnd-kit/accessibility/-/accessibility-3.0.1.tgz#3ccbefdfca595b0a23a5dc57d3de96bc6935641c"
+  integrity sha512-HXRrwS9YUYQO9lFRc/49uO/VICbM+O+ZRpFDe9Pd1rwVv2PCNkRiTZRdxrDgng/UkvdC3Re9r2vwPpXXrWeFzg==
   dependencies:
-    "@babel/runtime-corejs3" "^7.15.4"
-    "@douyinfe/semi-animation" "2.12.0"
-    "@douyinfe/semi-animation-styled" "2.13.0"
+    tslib "^2.0.0"
+
+"@dnd-kit/core@^6.0.8":
+  version "6.0.8"
+  resolved "http://bnpm.byted.org/@dnd-kit/core/-/core-6.0.8.tgz#040ae13fea9787ee078e5f0361f3b49b07f3f005"
+  integrity sha512-lYaoP8yHTQSLlZe6Rr9qogouGUz9oRUj4AHhDQGQzq/hqaJRpFo65X+JKsdHf8oUFBzx5A+SJPUvxAwTF2OabA==
+  dependencies:
+    "@dnd-kit/accessibility" "^3.0.0"
+    "@dnd-kit/utilities" "^3.2.1"
+    tslib "^2.0.0"
+
+"@dnd-kit/sortable@^7.0.2":
+  version "7.0.2"
+  resolved "http://bnpm.byted.org/@dnd-kit/sortable/-/sortable-7.0.2.tgz#791d550872457f3f3c843e00d159b640f982011c"
+  integrity sha512-wDkBHHf9iCi1veM834Gbk1429bd4lHX4RpAwT0y2cHLf246GAvU2sVw/oxWNpPKQNQRQaeGXhAVgrOl1IT+iyA==
+  dependencies:
+    "@dnd-kit/utilities" "^3.2.0"
+    tslib "^2.0.0"
+
+"@dnd-kit/utilities@^3.2.0", "@dnd-kit/utilities@^3.2.1":
+  version "3.2.1"
+  resolved "http://bnpm.byted.org/@dnd-kit/utilities/-/utilities-3.2.1.tgz#53f9e2016fd2506ec49e404c289392cfff30332a"
+  integrity sha512-OOXqISfvBw/1REtkSK2N3Fi2EQiLMlWUlqnOK/UpOISqBZPWpE6TqL+jcPtMOkE8TqYGiURvRdPSI9hltNUjEA==
+  dependencies:
+    tslib "^2.0.0"
+
+"@douyinfe/semi-animation-react@2.42.2":
+  version "2.42.2"
+  resolved "http://bnpm.byted.org/@douyinfe/semi-animation-react/-/semi-animation-react-2.42.2.tgz#96861d9b6759b0815cc3ce6c5554341f20cdc36f"
+  integrity sha512-3C9RBGlVPWnhrSB+f/YujeVOF1Prr/mvwq+bb1pwxvx0cwXBLW9CN698C4w2KJw28QyYnWsSXqXUSeZFFzHCng==
+  dependencies:
+    "@douyinfe/semi-animation" "2.42.2"
+    "@douyinfe/semi-animation-styled" "2.42.2"
     classnames "^2.2.6"
 
-"@douyinfe/semi-animation-styled@2.13.0":
-  version "2.13.0"
-  resolved "http://bnpm.byted.org/@douyinfe/semi-animation-styled/-/semi-animation-styled-2.13.0.tgz"
-  integrity sha512-rcecQcN0WS+j5hoRhdP67FW9KHRdEeCO7ntsTCUZUVjYLKWPFoJmITXuJpOwQs/IVfJlmUD7jxGQzp7qH2k0Ww==
-  dependencies:
-    "@babel/runtime-corejs3" "^7.15.4"
+"@douyinfe/semi-animation-styled@2.42.2":
+  version "2.42.2"
+  resolved "http://bnpm.byted.org/@douyinfe/semi-animation-styled/-/semi-animation-styled-2.42.2.tgz#12e23babee05b624e40a3927d0c7bb78632d97f8"
+  integrity sha512-zOQTlw86gYDBAGsjVqMkCXnNsN+b6yMnTwmKcEhNMATZaipkciImF3ROD0nCBAt1OimGk4p9mTTM13nu6k4OoA==
 
-"@douyinfe/semi-animation@2.12.0":
-  version "2.12.0"
-  resolved "http://bnpm.byted.org/@douyinfe/semi-animation/-/semi-animation-2.12.0.tgz"
-  integrity sha512-OAfL9Nk38ZPqfdKm9k4cvVXXzm16ALI4LxGNZ0qfe2RCLLnYGB/hNzTctoTDjYD35dFv0yroh3qsXtZuP2xNdg==
+"@douyinfe/semi-animation@2.42.2":
+  version "2.42.2"
+  resolved "http://bnpm.byted.org/@douyinfe/semi-animation/-/semi-animation-2.42.2.tgz#d323bd3479ea1b851cfa382fa96c00d5dd3a37fd"
+  integrity sha512-SaE6peBbydv59mmPSODNJiBHqCBz4lRuSvp/9sOCjvzQPXUvkOGLAAQQuN4oXSdGjEthUf0c1/5RmTvEStX8Ug==
   dependencies:
-    "@babel/runtime-corejs3" "^7.15.4"
     bezier-easing "^2.1.0"
 
-"@douyinfe/semi-foundation@2.13.0":
-  version "2.13.0"
-  resolved "http://bnpm.byted.org/@douyinfe/semi-foundation/-/semi-foundation-2.13.0.tgz"
-  integrity sha512-xMEyteclLG4++lOVvuZYGIf8CMBefoMU1Q5Fgw8IZuGFYcqRyYwS9Qn/rMV7KT1os9f8QSt9P2lPrKlX0zJ6Hw==
+"@douyinfe/semi-foundation@2.42.2":
+  version "2.42.2"
+  resolved "http://bnpm.byted.org/@douyinfe/semi-foundation/-/semi-foundation-2.42.2.tgz#96446dbcf57da56a8517d10569023b8c28ee13d6"
+  integrity sha512-uFYB1wn7d90NZN1XZPAG3KbVIYybTFsqxLDzyJ12xLzf1PPb9uTEjdvypmvB+EM4gGU+P2Np7Kmdh1Fjy1SsGQ==
   dependencies:
-    "@babel/runtime-corejs3" "^7.15.4"
-    "@douyinfe/semi-animation" "2.12.0"
+    "@douyinfe/semi-animation" "2.42.2"
     async-validator "^3.5.0"
     classnames "^2.2.6"
-    date-fns "^2.9.0"
-    date-fns-tz "^1.0.10"
+    date-fns "^2.29.3"
+    date-fns-tz "^1.3.8"
     lodash "^4.17.21"
     memoize-one "^5.2.1"
     scroll-into-view-if-needed "^2.2.24"
 
-"@douyinfe/semi-icons@2.13.0":
-  version "2.13.0"
-  resolved "http://bnpm.byted.org/@douyinfe/semi-icons/-/semi-icons-2.13.0.tgz"
-  integrity sha512-kzSFiisGK2Tl+luwI24SxvHVi1IvOhU0A5WkaXtJZ5UZ2dv/htjtCvyY3kOzFOGDYKz/QbMnVbfhDxZm/Re6eQ==
+"@douyinfe/semi-icons@2.42.2":
+  version "2.42.2"
+  resolved "http://bnpm.byted.org/@douyinfe/semi-icons/-/semi-icons-2.42.2.tgz#fb788b29727996e4b757b13f0e06d1156361a6a1"
+  integrity sha512-+opguU8n1Fa2aHQX21TNnvpUrZkEVLBGR8qi4fJFpt4gJyFJgNjBGIh2RCtt2vxL2W6HBXK6T11EOqKdH/8MkQ==
   dependencies:
-    "@babel/runtime-corejs3" "^7.15.4"
     classnames "^2.2.6"
 
-"@douyinfe/semi-illustrations@2.13.0":
-  version "2.13.0"
-  resolved "http://bnpm.byted.org/@douyinfe/semi-illustrations/-/semi-illustrations-2.13.0.tgz"
-  integrity sha512-8hScKeyLv3oX1Iq1cigXF277UVDX99fKeLTpW/88m9a52wM5riWZaeFdnYELN6WzbFPoOOjQNRCh0HxA5wRWIw==
-  dependencies:
-    "@babel/runtime-corejs3" "^7.15.4"
+"@douyinfe/semi-illustrations@2.42.2":
+  version "2.42.2"
+  resolved "http://bnpm.byted.org/@douyinfe/semi-illustrations/-/semi-illustrations-2.42.2.tgz#03f67902fba705040d888d69b9c94239612452c3"
+  integrity sha512-vcmg3mI/ZNvLPHQZHseTDodNRov5mQYLRiOV39M05tSVtoywSVt7YDmrGyjPnAH0tCjC8f8JE9fVt1lloAhyIg==
 
-"@douyinfe/semi-theme-default@2.13.0":
-  version "2.13.0"
-  resolved "http://bnpm.byted.org/@douyinfe/semi-theme-default/-/semi-theme-default-2.13.0.tgz"
-  integrity sha512-b6mP+2CPSgey9mxgdQMVyB9NWQnUkcyTpKrd05UcIY2OZGgUmXgmlR0Sd9pNQCcWbMUqTl6sOqvkPJwLbaolCA==
+"@douyinfe/semi-theme-default@2.42.2":
+  version "2.42.2"
+  resolved "http://bnpm.byted.org/@douyinfe/semi-theme-default/-/semi-theme-default-2.42.2.tgz#6301c93cc0bf3e3e9e39714fb4cbd7f332d546e8"
+  integrity sha512-Bywb7RTUoKqTMP7N8tCjthVwx1PxOqBqiqOP9yEKqtc4snR5FS4Jlu9SP1iy3MOMF86gaRRoH63GUshQjOatzA==
   dependencies:
     glob "^7.1.6"
 
-"@douyinfe/semi-ui@^2.13.0":
-  version "2.13.0"
-  resolved "http://bnpm.byted.org/@douyinfe/semi-ui/-/semi-ui-2.13.0.tgz"
-  integrity sha512-j1JIQEjWB77MPYesLXmH6LFZMHRTyJfNdaFDERMa5+Gi321vz5RuUh7mKkeMuatlxCa6tiz4fg5XFMb3vtW0Ew==
+"@douyinfe/semi-ui@2.42.2":
+  version "2.42.2"
+  resolved "http://bnpm.byted.org/@douyinfe/semi-ui/-/semi-ui-2.42.2.tgz#37cbf7434ed397cedd76bc7a6caa2c1cfa9635f7"
+  integrity sha512-SycO253gBGvxaD8yMzUZE55xfyGZe1I6jaWN+CoAkaJPSvFuufscyzv7UYKMi9mmrVrt9KMpTxI8fBQ2pQIYOw==
   dependencies:
-    "@babel/runtime-corejs3" "^7.15.4"
-    "@douyinfe/semi-animation" "2.12.0"
-    "@douyinfe/semi-animation-react" "2.13.0"
-    "@douyinfe/semi-foundation" "2.13.0"
-    "@douyinfe/semi-icons" "2.13.0"
-    "@douyinfe/semi-illustrations" "2.13.0"
-    "@douyinfe/semi-theme-default" "2.13.0"
-    "@types/react-window" "^1.8.2"
+    "@dnd-kit/core" "^6.0.8"
+    "@dnd-kit/sortable" "^7.0.2"
+    "@dnd-kit/utilities" "^3.2.1"
+    "@douyinfe/semi-animation" "2.42.2"
+    "@douyinfe/semi-animation-react" "2.42.2"
+    "@douyinfe/semi-foundation" "2.42.2"
+    "@douyinfe/semi-icons" "2.42.2"
+    "@douyinfe/semi-illustrations" "2.42.2"
+    "@douyinfe/semi-theme-default" "2.42.2"
     async-validator "^3.5.0"
     classnames "^2.2.6"
     copy-text-to-clipboard "^2.1.1"
-    date-fns "^2.9.0"
-    date-fns-tz "^1.0.10"
+    date-fns "^2.29.3"
+    date-fns-tz "^1.3.8"
     lodash "^4.17.21"
-    react-resizable "^1.8.0"
-    react-sortable-hoc "^2.0.0"
+    prop-types "^15.7.2"
+    react-resizable "^3.0.5"
     react-window "^1.8.2"
     resize-observer-polyfill "^1.5.1"
     scroll-into-view-if-needed "^2.2.24"
@@ -770,6 +793,11 @@
   dependencies:
     "@types/node" "*"
 
+"@types/lodash@^4.14.197":
+  version "4.14.197"
+  resolved "http://bnpm.byted.org/@types/lodash/-/lodash-4.14.197.tgz#e95c5ddcc814ec3e84c891910a01e0c8a378c54b"
+  integrity sha512-BMVOiWs0uNxHVlHBgzTIqJYmj+PgCo4euloGF+5m4okL3rEYzM2EEv78mw8zWSMM57dM7kVIgJ2QDvwHSoCI5g==
+
 "@types/mdast@^3.0.0":
   version "3.0.10"
   resolved "http://bnpm.byted.org/@types/mdast/-/mdast-3.0.10.tgz#4724244a82a4598884cbbe9bcfd73dff927ee8af"
@@ -811,13 +839,6 @@
   version "18.0.5"
   resolved "http://bnpm.byted.org/@types/react-dom/-/react-dom-18.0.5.tgz"
   integrity sha512-OWPWTUrY/NIrjsAPkAk1wW9LZeIjSvkXRhclsFO8CZcZGCOg2G0YZy4ft+rOyYxy8B7ui5iZzi9OkDebZ7/QSA==
-  dependencies:
-    "@types/react" "*"
-
-"@types/react-window@^1.8.2":
-  version "1.8.5"
-  resolved "http://bnpm.byted.org/@types/react-window/-/react-window-1.8.5.tgz"
-  integrity sha512-V9q3CvhC9Jk9bWBOysPGaWy/Z0lxYcTXLtLipkt2cnRj1JOSFNF7wqGpkScSXMgBwC+fnVRg/7shwgddBG5ICw==
   dependencies:
     "@types/react" "*"
 
@@ -1309,11 +1330,6 @@ copy-text-to-clipboard@^2.1.1:
   resolved "http://bnpm.byted.org/copy-text-to-clipboard/-/copy-text-to-clipboard-2.2.0.tgz"
   integrity sha512-WRvoIdnTs1rgPMkgA2pUOa/M4Enh2uzCwdKsOMYNAJiz/4ZvEJgmbF4OmninPmlFdAWisfeh0tH+Cpf7ni3RqQ==
 
-core-js-pure@^3.20.2:
-  version "3.23.2"
-  resolved "http://bnpm.byted.org/core-js-pure/-/core-js-pure-3.23.2.tgz"
-  integrity sha512-t6u7H4Ff/yZNk+zqTr74UjCcZ3k8ApBryeLLV4rYQd9aF3gqmjjGjjR44ENfeBMH8VVvSynIjAJ0mUuFhzQtrA==
-
 core-js@3:
   version "3.23.2"
   resolved "http://bnpm.byted.org/core-js/-/core-js-3.23.2.tgz#e07a60ca8b14dd129cabdc3d2551baf5a01c76f0"
@@ -1416,15 +1432,17 @@ cwebp-bin@^5.0.0:
     bin-wrapper "^4.0.1"
     logalot "^2.1.0"
 
-date-fns-tz@^1.0.10:
-  version "1.3.5"
-  resolved "http://bnpm.byted.org/date-fns-tz/-/date-fns-tz-1.3.5.tgz"
-  integrity sha512-SNhl/fWe7i2HoIB9ejLZhEEJ6ZtRRpOBbzizFrq11K2/iceS9Nk7fPN2VTYVOMgFB9u0f3eidSC4n1xaRONW2A==
+date-fns-tz@^1.3.8:
+  version "1.3.8"
+  resolved "http://bnpm.byted.org/date-fns-tz/-/date-fns-tz-1.3.8.tgz#083e3a4e1f19b7857fa0c18deea6c2bc46ded7b9"
+  integrity sha512-qwNXUFtMHTTU6CFSFjoJ80W8Fzzp24LntbjFFBgL/faqds4e5mo9mftoRLgr3Vi1trISsg4awSpYVsOQCRnapQ==
 
-date-fns@^2.9.0:
-  version "2.28.0"
-  resolved "http://bnpm.byted.org/date-fns/-/date-fns-2.28.0.tgz"
-  integrity sha512-8d35hViGYx/QH0icHYCeLmsLmMUheMmTyV9Fcm6gvNwdw31yXXH+O85sOBJ+OLnLQMKZowvpKb6FgMIQjcpvQw==
+date-fns@^2.29.3:
+  version "2.30.0"
+  resolved "http://bnpm.byted.org/date-fns/-/date-fns-2.30.0.tgz#f367e644839ff57894ec6ac480de40cae4b0f4d0"
+  integrity sha512-fnULvOpxnC5/Vg3NCiWelDsLiUc9bRwAPs/+LfTLNvetFCtCTN+yQz15C/fs4AwX1R9K5GLtLfn8QW+dWisaAw==
+  dependencies:
+    "@babel/runtime" "^7.21.0"
 
 debug@^3.2.6:
   version "3.2.7"
@@ -2624,13 +2642,6 @@ into-stream@^3.1.0:
     from2 "^2.1.1"
     p-is-promise "^1.1.0"
 
-invariant@^2.2.4:
-  version "2.2.4"
-  resolved "http://bnpm.byted.org/invariant/-/invariant-2.2.4.tgz"
-  integrity sha512-phJfQVBuaJM5raOpJjSfkiD6BpbCE4Ns//LaXl6wGYtUBY83nWS6Rf9tXm2e8VaK60JEjYldbPif/A2B1C2gNA==
-  dependencies:
-    loose-envify "^1.0.0"
-
 is-arrayish@^0.2.1:
   version "0.2.1"
   resolved "http://bnpm.byted.org/is-arrayish/-/is-arrayish-0.2.1.tgz#77c99840527aa8ecb1a8ba697b80645a7a926a9d"
@@ -2898,7 +2909,7 @@ locate-path@^5.0.0:
 
 lodash@^4.17.14, lodash@^4.17.21:
   version "4.17.21"
-  resolved "http://bnpm.byted.org/lodash/-/lodash-4.17.21.tgz"
+  resolved "http://bnpm.byted.org/lodash/-/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
   integrity sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==
 
 logalot@^2.0.0, logalot@^2.1.0:
@@ -2919,7 +2930,7 @@ longest@^1.0.0:
   resolved "http://bnpm.byted.org/longest/-/longest-1.0.1.tgz#30a0b2da38f73770e8294a0d22e6625ed77d0097"
   integrity sha512-k+yt5n3l48JU4k8ftnKG6V7u32wyH2NfKzeMto9F/QRE0amxy/LayxwlvjjkZEIzqR+19IrtFO8p5kB9QaYUFg==
 
-loose-envify@^1.0.0, loose-envify@^1.1.0, loose-envify@^1.4.0:
+loose-envify@^1.1.0, loose-envify@^1.4.0:
   version "1.4.0"
   resolved "http://bnpm.byted.org/loose-envify/-/loose-envify-1.4.0.tgz"
   integrity sha512-lyuxPGr/Wfhrlem2CL/UcnUc1zcqKAImBDzukY7Y5F/yQiNdko6+fRLevlw1HgMySw7f611UIY408EtxRSoK3Q==
@@ -3885,7 +3896,7 @@ process-nextick-args@~2.0.0:
   resolved "http://bnpm.byted.org/process-nextick-args/-/process-nextick-args-2.0.1.tgz#7820d9b16120cc55ca9ae7792680ae7dba6d7fe2"
   integrity sha512-3ouUOpQhtgrbOa17J7+uxOTpITYWaGP7/AhoR3+A+/1e9skrzelGi/dXzEYyvbxubEF6Wn2ypscTKiKJFFn1ag==
 
-prop-types@15.x, prop-types@^15.0.0, prop-types@^15.5.7, prop-types@^15.6.2, prop-types@^15.7.2, prop-types@^15.8.1:
+prop-types@15.x, prop-types@^15.0.0, prop-types@^15.6.2, prop-types@^15.7.2, prop-types@^15.8.1:
   version "15.8.1"
   resolved "http://bnpm.byted.org/prop-types/-/prop-types-15.8.1.tgz"
   integrity sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==
@@ -3988,10 +3999,10 @@ react-refresh@^0.13.0:
   resolved "http://bnpm.byted.org/react-refresh/-/react-refresh-0.13.0.tgz"
   integrity sha512-XP8A9BT0CpRBD+NYLLeIhld/RqG9+gktUjW1FkE+Vm7OCinbG1SshcK5tb9ls4kzvjZr9mOQc7HYgBngEyPAXg==
 
-react-resizable@^1.8.0:
-  version "1.11.1"
-  resolved "http://bnpm.byted.org/react-resizable/-/react-resizable-1.11.1.tgz"
-  integrity sha512-S70gbLaAYqjuAd49utRHibtHLrHXInh7GuOR+6OO6RO6uleQfuBnWmZjRABfqNEx3C3Z6VPLg0/0uOYFrkfu9Q==
+react-resizable@^3.0.5:
+  version "3.0.5"
+  resolved "http://bnpm.byted.org/react-resizable/-/react-resizable-3.0.5.tgz#362721f2efbd094976f1780ae13f1ad7739786c1"
+  integrity sha512-vKpeHhI5OZvYn82kXOs1bC8aOXktGU5AmKAgaZS4F5JPburCtbmDPqE7Pzp+1kN4+Wb81LlF33VpGwWwtXem+w==
   dependencies:
     prop-types "15.x"
     react-draggable "^4.0.3"
@@ -4010,15 +4021,6 @@ react-router@6.3.0:
   integrity sha512-7Wh1DzVQ+tlFjkeo+ujvjSqSJmkt1+8JO+T5xklPlgrh70y7ogx75ODRW0ThWhY7S+6yEDks8TYrtQe/aoboBQ==
   dependencies:
     history "^5.2.0"
-
-react-sortable-hoc@^2.0.0:
-  version "2.0.0"
-  resolved "http://bnpm.byted.org/react-sortable-hoc/-/react-sortable-hoc-2.0.0.tgz"
-  integrity sha512-JZUw7hBsAHXK7PTyErJyI7SopSBFRcFHDjWW5SWjcugY0i6iH7f+eJkY8cJmGMlZ1C9xz1J3Vjz0plFpavVeRg==
-  dependencies:
-    "@babel/runtime" "^7.2.0"
-    invariant "^2.2.4"
-    prop-types "^15.5.7"
 
 react-window@^1.8.2:
   version "1.8.7"
@@ -4086,6 +4088,11 @@ regenerator-runtime@^0.13.4:
   version "0.13.9"
   resolved "http://bnpm.byted.org/regenerator-runtime/-/regenerator-runtime-0.13.9.tgz"
   integrity sha512-p3VT+cOEgxFsRRA9X4lkI1E+k2/CtnKtU4gcxyaCUreilL/vqI6CdZ3wxVUx3UOUg+gnUOQQcRI7BmSI656MYA==
+
+regenerator-runtime@^0.14.0:
+  version "0.14.0"
+  resolved "http://bnpm.byted.org/regenerator-runtime/-/regenerator-runtime-0.14.0.tgz#5e19d68eb12d486f797e15a3c6a918f7cec5eb45"
+  integrity sha512-srw17NI0TUWHuGa5CFGGmhfNIeja30WMBfbslPNhf6JrqQlLN5gcrvig1oqPxiVaXb0oW0XRKtH6Nngs5lKCIA==
 
 remark-gfm@^3.0.1:
   version "3.0.1"
@@ -4576,6 +4583,11 @@ trough@^2.0.0:
   version "2.1.0"
   resolved "http://bnpm.byted.org/trough/-/trough-2.1.0.tgz#0f7b511a4fde65a46f18477ab38849b22c554876"
   integrity sha512-AqTiAOLcj85xS7vQ8QkAV41hPDIJ71XJB4RCUrzo/1GM2CQwhkJGaf9Hgr7BOugMRpgGUrqRg/DrBDl4H40+8g==
+
+tslib@^2.0.0:
+  version "2.6.2"
+  resolved "http://bnpm.byted.org/tslib/-/tslib-2.6.2.tgz#703ac29425e7b37cd6fd456e92404d46d1f3e4ae"
+  integrity sha512-AEYxH93jGFPn/a2iVAwW87VuUIkR1FVUKB77NwMF7nBTDkDrrT/Hpt/IrCJ0QXhW27jTBDcf5ZY7w6RiqTMw2Q==
 
 tslib@^2.3.0:
   version "2.4.0"

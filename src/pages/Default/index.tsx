@@ -1,12 +1,13 @@
 import React from "react";
 import { Button } from "@douyinfe/semi-ui";
+import { debounce } from "lodash";
 import $s from './style.module.less';
 
-const Site = () => {
+const Default = () => {
   const [src, setSrc] = React.useState('https://api.lovelive.tools/api/SweetNothings');
-  const onClick = () => {
-    setSrc(preSrc => `${preSrc}?id=${Math.random}`)
-  };
+  const onClick = debounce(() => {
+    setSrc(preSrc => `${preSrc}?id=${Math.random}`);
+  }, 200);
 
   return (
     <div>
@@ -22,4 +23,4 @@ const Site = () => {
   );
 }
 
-export default Site;
+export default Default;

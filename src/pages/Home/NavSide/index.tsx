@@ -4,10 +4,9 @@ import { IconApartment, IconLayers, IconLikeThumb, IconUserGroup, IconWrench } f
 import { GlobalInfoCtx } from '@/components/GlobalProvider';
 
 import styles from './style.module.less';
-// import { mobileDetectHelper } from '@/utils';
-// import { isMobile } from '@/constants';
+import { isMobile } from '@/constants';
 
-const Sider = () => {
+const NavSide = () => {
   const { updateGlobalInfo } = React.useContext(GlobalInfoCtx);
 
   const items = React.useMemo(
@@ -48,12 +47,11 @@ const Sider = () => {
 
   const defaultOpenKeys = React.useMemo(() => [items[0].itemKey], []);
 
-  const onClick = (data: { itemKey: React.ReactText; domEvent: MouseEvent; isOpen: boolean } | undefined) => {
+  const onClick = (data: { itemKey?: React.ReactText; domEvent?: MouseEvent; isOpen?: boolean } | undefined) => {
     if (items.find(({ itemKey }) => itemKey === data?.itemKey)) return;
     updateGlobalInfo({ navKey: data?.itemKey as string });
   };
 
-  const isMobile = React.useMemo(() => window.visualViewport.width < 600, []);
   const [isCollapsed, setIsCollapsed] = React.useState(isMobile);
   const onCollapseChange = (isCollapse: boolean) => {
     setIsCollapsed(isCollapse);
@@ -73,4 +71,4 @@ const Sider = () => {
   );
 };
 
-export default Sider;
+export default NavSide;
